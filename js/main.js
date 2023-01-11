@@ -1,6 +1,9 @@
 //Pega pelo atributo de dado
 const controle = document.querySelectorAll("[data-controle]");
 const estatistica = document.querySelectorAll("[data-estatistica]");
+const img = document.querySelector("#robotron");
+let cont = 0;
+
 
 const listaPecas = {
     "bracos": {
@@ -36,6 +39,10 @@ const listaPecas = {
     }
 }
 
+img.addEventListener("click", (evento) =>{
+    MudarRobo();
+})
+
 
 //Irá percorrer cada dado do const "controle"
 controle.forEach( (elemento) => {
@@ -66,5 +73,27 @@ function AtualizaEstatistica(peca){
         //listaPecas[peca][elemento.dataset.estatistica] -> Pega o valor do atributo (velocidade, força...) da peça 
         elemento.textContent = parseInt(elemento.textContent) + listaPecas[peca][elemento.dataset.estatistica];
     })
+}
+
+function MudarRobo(){
+    if(cont == 0){
+        img.setAttribute('src', 'img/robotronPreto.png');
+        cont++;
+    }else if(cont == 1){
+        img.setAttribute('src', 'img/robotronBranco.png');
+        cont++;
+    }else if(cont == 2){
+        img.setAttribute('src', 'img/robotronAmarelo.png');
+        cont++;
+    }else if(cont == 3){
+        img.setAttribute('src', 'img/robotronVermelho.png');
+        cont++;
+    }else if(cont == 4){
+        img.setAttribute('src', 'img/robotronRosa.png');
+        cont++;
+    }else{
+        img.setAttribute('src', 'img/robotronAzul.png');
+        cont = 0;
+    }
 }
 
