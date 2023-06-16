@@ -1,2 +1,2 @@
-# JavaScript: manipulando o DOM da Alura - robotron-2000-alura
+# Curso da Alura - JavaScript: manipulando o DOM da Alura
 Projeto de HTML, CSS e JavaScript feito no curso JavaScript: manipulando o DOM da Alura.
